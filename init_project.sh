@@ -56,6 +56,10 @@ c_based_project() {
         sed -i 's/DEFINE_NAME/'"$PROJECT_NAME"'/g' CMakeLists.txt
     fi
 
+    echo "Renaming .vscode..."
+    mv .vscode-test .vscode
+    sed -i 's/DEFINE_NAME/'"$PROJECT_NAME"'/g' .vscode/tasks.json
+
     echo "Copying Workflows file and dependencies"
     cp -r "$WORKFLOWTEMPLATE_PATH/C-CPP/." .
 

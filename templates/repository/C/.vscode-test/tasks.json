@@ -1,0 +1,23 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "maketask",
+      "type": "shell",
+      "command": "make",
+      "args": ["re"],
+      "problemMatcher": ["$gcc"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "run DEFINE_NAME",
+      "type": "shell",
+      "command": "./DEFINE_NAME",
+      "dependsOn": ["maketask"],
+      "group": "build"
+    }
+  ]
+}
