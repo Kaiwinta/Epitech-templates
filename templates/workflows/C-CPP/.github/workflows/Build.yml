@@ -7,7 +7,7 @@ on:
 jobs:
 
   check_project_compilation_and_tests:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     container: epitechcontent/epitest-docker
     steps:
       - name: Checkout code
